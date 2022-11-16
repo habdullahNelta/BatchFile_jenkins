@@ -1,0 +1,36 @@
+Hasannelta
+0947797559Abc
+
+
+https://narenchejara.medium.com/trigger-jenkins-job-remotely-using-jenkins-api-20973618a493
+
+1119f427a6e0505395fd6db49d8cee9bee
+
+
+
+http://localhost:8080/job/test/build?token=1119f427a6e0505395fd6db49d8cee9bee
+
+
+
+http://localhost:8080/job/parameter/buildWithParameters?card=1234
+
+buildWithParameters?token=TOKEN&PARAMETER=Value
+
+http://localhost:8080/job/parameter/buildWithParameters?token=1119f427a6e0505395fd6db49d8cee9bee&card=1234
+
+
+
+http://localhost:8080/job/parameter/build?token=1119f427a6e0505395fd6db49d8cee9bee&card=1234
+
+
+
+
+
+run old
+start http://localhost:8080/job/parameter/buildWithParameters?token=1119f427a6e0505395fd6db49d8cee9bee^&card=%cardVar%^&company=%companyVar%     
+
+
+
+run new
+
+curl -d "card=test555&company=zzzz" -i -X POST http://Hasannelta:1119f427a6e0505395fd6db49d8cee9bee@localhost:8080/job/parameter/buildWithParameters
